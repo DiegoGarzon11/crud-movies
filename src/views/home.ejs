@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	<body>
+		<header>
+			<h1>Recordatorio de peliculas</h1>
+			<p>
+				Este es un recordario hecho por
+				<a
+					href="https://www.linkedin.com/in/diego-garzon-b20771204/ "
+					target="_blank"
+					><i style="color:rgb(1, 1, 117) ;text-decoration: underline;">Diego Garzon</i></a
+				>
+				para recordar las peliculas que le gustan
+			</p>
+		</header>
+		<main>
+			<div class="container-form">
+				<form method="POST" action="/create/newMovie" enctype="multipart/form-data">
+					<h3><i>Agrega tu nueva pelicula Favorita</i></h3>
+					<br />
+					<br />
+					<label for="name">Nombre pelicula<span>(requerido)</span></label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Titulo de pelicula"
+						required
+					/>
+					<br />
+					<!--! :elementos de la lista de las peliculas   -->
+					<label for="genero">Genero<span>(requerido)</span> </label>
+					<input
+						id="genero"
+						list="generos"
+						name="generos"
+						placeholder="Genero de pelicula"
+						required
+					/>
+					<datalist id="generos">
+						<option value="Accion">peliculas de accion</option>
+						<option value="Aventura">peliculas de aventura</option>
+						<option value="Ciencia Ficcion">peliculas de ficcion</option>
+						<option value="Comedia">peliculas de comedia</option>
+						<option value="Drama">peliculas de drama</option>
+						<option value="Fantasia">peliculas de fantasia</option>
+						<option value="Historia">peliculas de historia</option>
+						<option value="Musica">peliculas de musica</option>
+						<option value="Romance">peliculas de romance</option>
+						<option value="Terror">peliculas de terror</option>
+					</datalist>
+
+					<br />
+					<label for="img">Imagen<span>(requerido)</span></label>
+					<input type="file" name="img" id="img" accept="(.png.jpg)">
+
+					<hr />
+
+					<button type="submit">Agregar pelicula</button>
+				</form>
+			</div>
+			<div class="movies">
+				<h1 class="titulo-movies">Peliculas Favoritas</h1>
+				
+				<br>
+				<% if(movies.length === 0){ %>
+					<br>
+					<br>
+					<br>
+					<br>
+					<h2>No hay peliculas agregadas</h2>
+				
+				<% } %> 
+				<div class="almacen">
+				<% for(let i = 0; i<movies.length ; i++) { %>
+					
+					<hr class="linea">
+					<div class="cada-peli">
+						<nav class="fecha"> <%= movies[i].date %> </nav>
+						<h2 id="title"><%= movies[i].titulo%></h2>
+						<p> <b> <i>Genero</i></b>: <%=movies[i].genero %></p>
+						<img width="150" height="150" src="/img/<%=movies[i].file  %> " alt="<%=movies[i].titulo%> -- <%=movies[i].genero %>" />
+						<div class="botones">
+							<a href="/editar/pelicula/<%=movies[i].id  %>  "><button id="editar">Editar</button></a>
+								
+			
+							<a href="/delete/pelicula/<%= movies[i].id %>">
+								<button id="eliminar">Eliminar</button>
+							</a>
+						</div>
+					</div>
+					
+				<% }; %>
+			</div>
+			</div>
+		</main>
+	
+		<footer>
+			<div class="class">
+				<h2>Guarda tus pelis para luego verlas desde tu lugar favorito</h2>
+			</div>
+		</footer>
+		<%- include('./partials/scripts.js') %>
+	</body>
+</html>

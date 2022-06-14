@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./partials/head.ejs') %>
+	
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+		crossorigin="anonymous"
+	/>
+   <link rel="stylesheet" href="/css/movie.css" />
+ 
+	
+	<body>
+      <div class="btn-back">
+         <a href="/" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">volver a la pagina principal</a>
+      </div>
+		<form class="container"> 
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label"
+					>Nuevo titulo</label
+				>
+				<input
+					type="text"
+					class="form-control"
+					id="exampleInputEmail1"
+					aria-describedby="emailHelp"
+					placeholder="titulo"
+				/>
+			</div>
+			<div class="mb-3">
+				<label for="generos-edit" class="form-label"
+					>Nuevo genero</label
+				>
+            <input list="generos-edit" id="generos-edit" class="form-control" placeholder="genero">
+            <datalist id="generos-edit">
+               <option value="Accion">peliculas de accion</option>
+               <option value="Aventura">peliculas de aventura</option>
+               <option value="Ciencia Ficcion">peliculas de ficcion</option>
+               <option value="Comedia">peliculas de comedia</option>
+               <option value="Drama">peliculas de drama</option>
+               <option value="Fantasia">peliculas de fantasia</option>
+               <option value="Historia">peliculas de historia</option>
+               <option value="Musica">peliculas de musica</option>
+               <option value="Romance">peliculas de romance</option>
+               <option value="Terror">peliculas de terror</option>
+            </datalist>
+			</div>
+         <label for="img">Imagen<span>(requerido)</span></label>
+         <input type="file" name="img" id="img" accept="(.png.jpg)" class="form-control">
+       
+			</div>
+			<button type="submit" class="btn btn-primary ">Actualizar</button>
+		</form>
+		
+	</body>
+	
+</html>

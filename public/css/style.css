@@ -1,0 +1,153 @@
+* {
+	font-family: arial, sans-serif;
+	box-sizing: border-box;
+	margin: 0%;
+}
+body {
+	background-color: #b6b2b2;
+}
+main {
+	display: flex;
+}
+header {
+	background-color: black;
+	text-align: center;
+	padding: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(195, 195, 195);
+	margin-bottom: 50px;
+}
+form {
+	color: white;
+
+	background-color: #c3c0c0;
+	text-align: center;
+	margin: 30px;
+	padding: 10px;
+	box-shadow: 0px 0px 20px black;
+}
+
+.container-form {
+	height: 500px;
+	text-align: center;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	justify-content: center;
+}
+.movies {
+	background-color: green;
+	padding: 10px;
+	display: flex;
+	background-color: #c3c0c0;
+	height: 500px;
+	text-align: center;
+	flex-grow: 0.95;
+	display: block;
+	border-radius: 15px;
+	overflow: auto;
+	box-shadow: 10px 5px 30px rgb(68, 66, 65);
+}
+
+.titulo-movies {
+	text-decoration: solid underline;
+}
+
+input,
+label,
+button {
+	display: flex;
+	margin: 10px;
+	font-size: 17px;
+	border-radius: 10px;
+}
+#img,
+button {
+	cursor: pointer;
+}
+span {
+	padding-left: 2px;
+	color: grey;
+}
+footer {
+	background-color: black;
+	text-align: center;
+	padding: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(195, 195, 195);
+	margin-top: 50px;
+}
+.botones {
+	margin-top: 5px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+#editar,
+#eliminar {
+	background-color: grey;
+}
+#editar:hover,
+#eliminar:hover {
+	background-color: rgb(63, 62, 61);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+.cada-peli {
+	border: #0d0d0d solid 1px;
+	background-color: rgba(229, 215, 215, 0.566);
+}
+.almacen {
+	display: flex;
+	width: 60%;
+	margin-left: 20%;
+	align-items: center;
+	flex-direction: column;
+}
+
+.linea {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.fecha {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 10px;
+	padding: 3px;
+	background-color: gray;
+	color: black;
+}
+
+.movies::-webkit-scrollbar {
+	width: 10px;
+}
+.movies::-webkit-scrollbar-thumb {
+	background-color: #121111;
+	border-radius: 10px;
+}
+.movies::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(25, 25, 26);
+	border-radius: 20px;
+	border: 3px solid rgb(90, 89, 86);
+}

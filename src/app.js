@@ -1,5 +1,5 @@
 /* Importing the userRouter.js file. */
-const route = require('./routes/userRouter');
+const route = require('./routes/productRouter');
 
 const methodOverride = require('method-override');
 const express = require('express');
@@ -8,6 +8,7 @@ const app = express();
 
 
 app.use(methodOverride('_method'));
+/* Parsing the body of the request. */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -17,7 +18,8 @@ app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', route);
-app.use('/create/newMovie', route);
+app.use('/newMovie', route);
+
 
 
 //server on port 3000

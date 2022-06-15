@@ -117,7 +117,7 @@ a {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
+.actualizar,
 .fecha {
 	display: flex;
 	align-items: flex-end;
@@ -125,6 +125,11 @@ a {
 	padding: 3px;
 	background-color: gray;
 	color: black;
+}
+.delete {
+	margin: 0%;
+	padding: 0%;
+	background-color: black;
 }
 
 .movies::-webkit-scrollbar {

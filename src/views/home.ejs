@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('./partials/head.ejs') %>
+	<%- include('./partials/ejs/head') %>
 	<body>
 		<header>
 			<h1>Recordatorio de peliculas</h1>
@@ -53,7 +53,7 @@
 
 					<br />
 					<label for="img">Imagen<span>(requerido)</span></label>
-					<input type="file" name="img" id="img" accept="(.png.jpg)">
+					<input type="file" name="img" id="img" accept=".jpg , .png , .jpeg" 	required>
 
 					<hr />
 
@@ -82,12 +82,16 @@
 						<p> <b> <i>Genero</i></b>: <%=movies[i].genero %></p>
 						<img width="150" height="150" src="/img/<%=movies[i].file  %> " alt="<%=movies[i].titulo%> -- <%=movies[i].genero %>" />
 						<div class="botones">
-							<a href="/editar/pelicula/<%=movies[i].id  %>  "><button id="editar">Editar</button></a>
+							<a href="newMovie/<%=movies[i].id%>/editar "><button id="editar">Editar</button></a>
 								
 			
-							<a href="/delete/pelicula/<%= movies[i].id %>">
-								<button id="eliminar">Eliminar</button>
-							</a>
+							
+								<form method="post" action="/newMovie/<%=movies[i].id%>/delete/?_method=delete" class="delete">
+
+									<button id="eliminar">Eliminar</button>
+
+								</form>
+							
 						</div>
 					</div>
 					
@@ -101,6 +105,6 @@
 				<h2>Guarda tus pelis para luego verlas desde tu lugar favorito</h2>
 			</div>
 		</footer>
-		<%- include('./partials/scripts.js') %>
+		<%- include('./partials/scripts/scripts.js') %>
 	</body>
 </html>

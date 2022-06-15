@@ -1,3 +1,5 @@
+
+require('dotenv').config();
 /* Importing the userRouter.js file. */
 const route = require('./routes/productRouter');
 
@@ -22,7 +24,7 @@ app.use('/newMovie', route);
 
 
 
-//server on port 3000
-app.listen(3000, () => {
-	console.log('Server is running on port 3000');
+//server on port 
+app.listen(process.env.PORT, () => {
+	console.log('Server is running on port ');
 });

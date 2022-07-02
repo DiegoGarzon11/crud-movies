@@ -19,7 +19,7 @@
          <a href="/" class="btn btn-primary" aria-pressed="true">volver a la pagina principal</a>
       </div>
 		
-		<form class="container" method="post" action="/newMovie/ <%=movie.id %>/editar?_method=put" > 
+		<form class="container" method="post" action="/newMovie/ <%=movie.id %>/editar?_method=put" enctype="multipart/form-data" > 
 			<div class="mb-3">
 				<label for="exampleInputEmail1" class="form-label"
 					>Nuevo titulo</label

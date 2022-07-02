@@ -4,7 +4,7 @@
 	margin: 0%;
 }
 body {
-	background-color: #b6b2b2;
+	background-color: hsla(0, 0%, 0%, 0.59);
 }
 main {
 	display: flex;
@@ -19,23 +19,19 @@ header {
 	margin-bottom: 50px;
 }
 form {
-	color: white;
-
+	color: rgb(71, 69, 69);
 	background-color: #c3c0c0;
-	text-align: center;
+
 	margin: 30px;
 	padding: 10px;
 	box-shadow: 0px 0px 20px black;
+	border-radius: 15px;
 }
 
 .container-form {
-	height: 500px;
 	text-align: center;
-	width: 40%;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	padding: 10px;
 	justify-content: center;
 }
 .movies {
@@ -49,7 +45,7 @@ form {
 	display: block;
 	border-radius: 15px;
 	overflow: auto;
-	box-shadow: 10px 5px 30px rgb(68, 66, 65);
+	box-shadow: 10px 5px 30px rgb(0, 0, 0);
 }
 
 .titulo-movies {
@@ -70,7 +66,7 @@ button {
 }
 span {
 	padding-left: 2px;
-	color: grey;
+	color: rgba(92, 66, 66, 0.656);
 }
 footer {
 	background-color: black;
@@ -82,6 +78,7 @@ footer {
 	margin-top: 50px;
 }
 .botones {
+	width: 100%;
 	margin-top: 5px;
 	background-color: black;
 	display: flex;
@@ -101,6 +98,7 @@ a {
 	color: white;
 }
 .cada-peli {
+	width:55%;
 	border: #0d0d0d solid 1px;
 	background-color: rgba(229, 215, 215, 0.566);
 }
@@ -117,12 +115,10 @@ a {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.actualizar,
+
 .fecha {
-	display: flex;
-	align-items: flex-end;
 	margin-bottom: 10px;
-	padding: 3px;
+	padding: 8px;
 	background-color: gray;
 	color: black;
 }
@@ -141,6 +137,31 @@ a {
 }
 .movies::-webkit-scrollbar-track {
 	background-color: transparent;
+}
+@media screen and (max-width: 1000px) {
+	form {
+		width: 500px;
+	}
+	.linea {
+		visibility: hidden;
+	}
+	main {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+	.movies {
+		width: 80%;
+	}
+	.almacen {
+		display: flex;
+
+		margin: 0% 10% 0% 10%;
+		width: 80%;
+		flex-direction: row-reverse;
+		overflow-x: scroll;
+	}
 }
 
 ::-webkit-scrollbar {

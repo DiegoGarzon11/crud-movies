@@ -11,14 +11,8 @@ router.post('/create/newMovie', uploadFile.single('img'), controller.add);
 /* A route that is used to get the new movie page. */
 router.get('/:id/editar', controller.newMovie);
 /* Updating the movie. */
-router.put('/:id/editar',  uploadFile.single('newImg'),controller.update);
+router.put('/:id/editar', uploadFile.single('newImg'), controller.update);
 /* Deleting the movie. */
 router.delete('/:id/delete', controller.delete);
-
-
-
-
-
-
 
 module.exports = router;

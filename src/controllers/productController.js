@@ -56,6 +56,7 @@ const controller = {
 				m.titulo = datos.newTitle;
 				m.genero = datos.newGenero;
 				m.file = req.file.filename;
+				m.date = moment().format('dddd-DD/MMMM/YYYY--HH:mm:ss');
 			}
 		}
 		fs.writeFileSync(movies, JSON.stringify(moviesJson, null, ' '));
@@ -64,7 +65,7 @@ const controller = {
 	delete: (req, res) => {
 		let idMovie = req.params.id;
 
-		destroy = moviesJson.filter((movie) => movie.id != idMovie);
+		let destroy = moviesJson.filter((movie) => movie.id != idMovie);
 		fs.writeFileSync(movies, JSON.stringify(destroy, null, ' '));
 
 		res.redirect('/');

@@ -4,4 +4,4 @@ pagina para guardar tus peliculas favoritas, editarlas y borrarlas cuadno ya no 
 por el momento los datos se almacenan en un archivo plano.
 # en proceso
 trabajando tambien en el tema de validaciones.
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=Your_GitHub_Username&show_icons=true)
+

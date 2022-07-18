@@ -5,4 +5,3 @@ por el momento los datos se almacenan en un archivo plano.
 # en proceso
 trabajando tambien en el tema de validaciones.
 
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Your_GitHub_Username&theme=blue-green)
